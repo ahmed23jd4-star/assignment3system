@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an account using the validated registration form.">
+    <title>Register | Web Basics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/registration.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <h1 id="site-title">Web Basics</h1>
+        <p class="tagline">Small steps to build your first website</p>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+            <a href="components.html">Components</a><a href="registration.html" aria-current="page">Register</a><a href="data.html">Data table</a>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section aria-labelledby="registration-title">
+            <h2 id="registration-title">Create your account</h2>
+            <p>Enter your details below. Each field is checked before the form can continue.</p>
+            <form id="registration-form" novalidate>
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error">
+                    <small class="field-error" id="name-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+                    <small class="field-error" id="email-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-error">
+                    <small class="field-error" id="password-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="confirm-password">Confirm password</label>
+                    <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" aria-describedby="confirm-password-error">
+                    <small class="field-error" id="confirm-password-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="age">Age</label>
+                    <input id="age" name="age" type="number" min="1" max="120" inputmode="numeric" aria-describedby="age-error">
+                    <small class="field-error" id="age-error"></small>
+                </div>
+                <button type="submit">Register</button>
+                <p id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 Web Basics</p></footer>
+</body>
+</html>

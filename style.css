@@ -92,6 +92,20 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
     color: var(--text);
     font: inherit;
 }
+input[type="password"], input[type="number"], input[type="search"] {
+    width: 100%;
+    min-height: 44px;
+    padding: 9px 10px;
+    border: 1px solid #72675e;
+    border-radius: 5px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+.field-error { display: block; min-height: 1.4em; margin-top: 3px; color: #a21d1d; font-weight: bold; }
+[aria-invalid="true"] { border-color: #a21d1d !important; }
+.table-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.table-actions button { margin-top: 0; }
 textarea { resize: vertical; }
 fieldset { margin: 18px 0; padding: 12px; border: 1px solid var(--border); border-radius: 6px; }
 legend { padding: 0 5px; }
@@ -141,5 +155,7 @@ footer p { margin: 0; }
     .button-link, button { border-color: #d59b5a; }
     .button-link:hover, button:hover { background: #543a27; }
     input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea { border-color: #a99a8c; }
+    input[type="password"], input[type="number"], input[type="search"] { border-color: #a99a8c; }
+    .field-error { color: #ffaaaa; }
     a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline-color: #8fc8ff; }
 }
